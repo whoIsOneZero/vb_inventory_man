@@ -24,6 +24,19 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tabCustDet = New System.Windows.Forms.TabPage()
+        Me.grpboxAuthPage = New System.Windows.Forms.GroupBox()
+        Me.lblPassword = New System.Windows.Forms.Label()
+        Me.lblUsername = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.btnExitProgram = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnPrevious = New System.Windows.Forms.Button()
+        Me.btnNext = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
         Me.lblAccStatus = New System.Windows.Forms.Label()
         Me.lbURL = New System.Windows.Forms.Label()
         Me.lblEmail = New System.Windows.Forms.Label()
@@ -52,15 +65,12 @@ Partial Class Form1
         Me.txtAccountNum = New System.Windows.Forms.TextBox()
         Me.tabDefSett = New System.Windows.Forms.TabPage()
         Me.tabCreditControl = New System.Windows.Forms.TabPage()
-        Me.btnAdd = New System.Windows.Forms.Button()
-        Me.btnSave = New System.Windows.Forms.Button()
-        Me.btnNext = New System.Windows.Forms.Button()
-        Me.btnPrevious = New System.Windows.Forms.Button()
-        Me.btnDelete = New System.Windows.Forms.Button()
-        Me.btnExitProgram = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.btnLogin = New System.Windows.Forms.Button()
+        Me.btnReset = New System.Windows.Forms.Button()
+        Me.btnExit = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.tabCustDet.SuspendLayout()
+        Me.grpboxAuthPage.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -79,6 +89,7 @@ Partial Class Form1
         'tabCustDet
         '
         Me.tabCustDet.BackColor = System.Drawing.SystemColors.Control
+        Me.tabCustDet.Controls.Add(Me.grpboxAuthPage)
         Me.tabCustDet.Controls.Add(Me.DataGridView1)
         Me.tabCustDet.Controls.Add(Me.btnExitProgram)
         Me.tabCustDet.Controls.Add(Me.btnDelete)
@@ -119,6 +130,129 @@ Partial Class Form1
         Me.tabCustDet.Size = New System.Drawing.Size(1345, 621)
         Me.tabCustDet.TabIndex = 0
         Me.tabCustDet.Text = "Customer Details"
+        '
+        'grpboxAuthPage
+        '
+        Me.grpboxAuthPage.Controls.Add(Me.btnExit)
+        Me.grpboxAuthPage.Controls.Add(Me.btnReset)
+        Me.grpboxAuthPage.Controls.Add(Me.btnLogin)
+        Me.grpboxAuthPage.Controls.Add(Me.lblPassword)
+        Me.grpboxAuthPage.Controls.Add(Me.lblUsername)
+        Me.grpboxAuthPage.Controls.Add(Me.TextBox2)
+        Me.grpboxAuthPage.Controls.Add(Me.TextBox1)
+        Me.grpboxAuthPage.Controls.Add(Me.Label1)
+        Me.grpboxAuthPage.Location = New System.Drawing.Point(3, 6)
+        Me.grpboxAuthPage.Name = "grpboxAuthPage"
+        Me.grpboxAuthPage.Size = New System.Drawing.Size(1339, 619)
+        Me.grpboxAuthPage.TabIndex = 33
+        Me.grpboxAuthPage.TabStop = False
+        Me.grpboxAuthPage.Text = "..."
+        '
+        'lblPassword
+        '
+        Me.lblPassword.AutoSize = True
+        Me.lblPassword.ForeColor = System.Drawing.Color.Black
+        Me.lblPassword.Location = New System.Drawing.Point(436, 347)
+        Me.lblPassword.Name = "lblPassword"
+        Me.lblPassword.Size = New System.Drawing.Size(92, 24)
+        Me.lblPassword.TabIndex = 4
+        Me.lblPassword.Text = "Password"
+        '
+        'lblUsername
+        '
+        Me.lblUsername.AutoSize = True
+        Me.lblUsername.ForeColor = System.Drawing.Color.Black
+        Me.lblUsername.Location = New System.Drawing.Point(436, 264)
+        Me.lblUsername.Name = "lblUsername"
+        Me.lblUsername.Size = New System.Drawing.Size(97, 24)
+        Me.lblUsername.TabIndex = 3
+        Me.lblUsername.Text = "Username"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(537, 343)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(289, 29)
+        Me.TextBox2.TabIndex = 2
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(537, 261)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(289, 29)
+        Me.TextBox1.TabIndex = 1
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(193, 85)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(948, 73)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Inventory Management System"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(608, 395)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(649, 192)
+        Me.DataGridView1.TabIndex = 32
+        '
+        'btnExitProgram
+        '
+        Me.btnExitProgram.Location = New System.Drawing.Point(1105, 325)
+        Me.btnExitProgram.Name = "btnExitProgram"
+        Me.btnExitProgram.Size = New System.Drawing.Size(152, 29)
+        Me.btnExitProgram.TabIndex = 31
+        Me.btnExitProgram.Text = "Exit Program"
+        Me.btnExitProgram.UseVisualStyleBackColor = True
+        '
+        'btnDelete
+        '
+        Me.btnDelete.Location = New System.Drawing.Point(1105, 267)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(152, 29)
+        Me.btnDelete.TabIndex = 30
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
+        '
+        'btnPrevious
+        '
+        Me.btnPrevious.Location = New System.Drawing.Point(1105, 213)
+        Me.btnPrevious.Name = "btnPrevious"
+        Me.btnPrevious.Size = New System.Drawing.Size(152, 29)
+        Me.btnPrevious.TabIndex = 29
+        Me.btnPrevious.Text = "Previous"
+        Me.btnPrevious.UseVisualStyleBackColor = True
+        '
+        'btnNext
+        '
+        Me.btnNext.Location = New System.Drawing.Point(1105, 162)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(152, 29)
+        Me.btnNext.TabIndex = 28
+        Me.btnNext.Text = "Next"
+        Me.btnNext.UseVisualStyleBackColor = True
+        '
+        'btnSave
+        '
+        Me.btnSave.Location = New System.Drawing.Point(1105, 111)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(152, 29)
+        Me.btnSave.TabIndex = 27
+        Me.btnSave.Text = "Save"
+        Me.btnSave.UseVisualStyleBackColor = True
+        '
+        'btnAdd
+        '
+        Me.btnAdd.Location = New System.Drawing.Point(1105, 59)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(152, 29)
+        Me.btnAdd.TabIndex = 26
+        Me.btnAdd.Text = "Add"
+        Me.btnAdd.UseVisualStyleBackColor = True
         '
         'lblAccStatus
         '
@@ -349,67 +483,38 @@ Partial Class Form1
         Me.tabCreditControl.TabIndex = 2
         Me.tabCreditControl.Text = "Credit Control"
         '
-        'btnAdd
+        'btnLogin
         '
-        Me.btnAdd.Location = New System.Drawing.Point(1105, 59)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(152, 29)
-        Me.btnAdd.TabIndex = 26
-        Me.btnAdd.Text = "Add"
-        Me.btnAdd.UseVisualStyleBackColor = True
+        Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.ForeColor = System.Drawing.Color.Black
+        Me.btnLogin.Location = New System.Drawing.Point(518, 427)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(85, 37)
+        Me.btnLogin.TabIndex = 5
+        Me.btnLogin.Text = "Login"
+        Me.btnLogin.UseVisualStyleBackColor = True
         '
-        'btnSave
+        'btnReset
         '
-        Me.btnSave.Location = New System.Drawing.Point(1105, 111)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(152, 29)
-        Me.btnSave.TabIndex = 27
-        Me.btnSave.Text = "Save"
-        Me.btnSave.UseVisualStyleBackColor = True
+        Me.btnReset.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReset.ForeColor = System.Drawing.Color.Black
+        Me.btnReset.Location = New System.Drawing.Point(619, 427)
+        Me.btnReset.Name = "btnReset"
+        Me.btnReset.Size = New System.Drawing.Size(85, 39)
+        Me.btnReset.TabIndex = 6
+        Me.btnReset.Text = "Reset"
+        Me.btnReset.UseVisualStyleBackColor = True
         '
-        'btnNext
+        'btnExit
         '
-        Me.btnNext.Location = New System.Drawing.Point(1105, 162)
-        Me.btnNext.Name = "btnNext"
-        Me.btnNext.Size = New System.Drawing.Size(152, 29)
-        Me.btnNext.TabIndex = 28
-        Me.btnNext.Text = "Next"
-        Me.btnNext.UseVisualStyleBackColor = True
-        '
-        'btnPrevious
-        '
-        Me.btnPrevious.Location = New System.Drawing.Point(1105, 213)
-        Me.btnPrevious.Name = "btnPrevious"
-        Me.btnPrevious.Size = New System.Drawing.Size(152, 29)
-        Me.btnPrevious.TabIndex = 29
-        Me.btnPrevious.Text = "Previous"
-        Me.btnPrevious.UseVisualStyleBackColor = True
-        '
-        'btnDelete
-        '
-        Me.btnDelete.Location = New System.Drawing.Point(1105, 267)
-        Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(152, 29)
-        Me.btnDelete.TabIndex = 30
-        Me.btnDelete.Text = "Delete"
-        Me.btnDelete.UseVisualStyleBackColor = True
-        '
-        'btnExitProgram
-        '
-        Me.btnExitProgram.Location = New System.Drawing.Point(1105, 325)
-        Me.btnExitProgram.Name = "btnExitProgram"
-        Me.btnExitProgram.Size = New System.Drawing.Size(152, 29)
-        Me.btnExitProgram.TabIndex = 31
-        Me.btnExitProgram.Text = "Exit Program"
-        Me.btnExitProgram.UseVisualStyleBackColor = True
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(608, 395)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(649, 192)
-        Me.DataGridView1.TabIndex = 32
+        Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExit.ForeColor = System.Drawing.Color.Black
+        Me.btnExit.Location = New System.Drawing.Point(725, 427)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(85, 39)
+        Me.btnExit.TabIndex = 8
+        Me.btnExit.Text = "Exit"
+        Me.btnExit.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -423,6 +528,8 @@ Partial Class Form1
         Me.TabControl1.ResumeLayout(False)
         Me.tabCustDet.ResumeLayout(False)
         Me.tabCustDet.PerformLayout()
+        Me.grpboxAuthPage.ResumeLayout(False)
+        Me.grpboxAuthPage.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -465,4 +572,13 @@ Partial Class Form1
     Friend WithEvents btnSave As Button
     Friend WithEvents btnAdd As Button
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents grpboxAuthPage As GroupBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lblPassword As Label
+    Friend WithEvents lblUsername As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents btnReset As Button
+    Friend WithEvents btnLogin As Button
+    Friend WithEvents btnExit As Button
 End Class
