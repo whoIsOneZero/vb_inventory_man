@@ -37,23 +37,31 @@ Partial Class Form1
         Me.lblAddress = New System.Windows.Forms.Label()
         Me.lblName = New System.Windows.Forms.Label()
         Me.lblAccount = New System.Windows.Forms.Label()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtBalance = New System.Windows.Forms.TextBox()
+        Me.txtAccStatus = New System.Windows.Forms.TextBox()
+        Me.txtURL = New System.Windows.Forms.TextBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
+        Me.txtFax = New System.Windows.Forms.TextBox()
+        Me.txtTelephone = New System.Windows.Forms.TextBox()
+        Me.txtMobile = New System.Windows.Forms.TextBox()
+        Me.txtVATNum = New System.Windows.Forms.TextBox()
+        Me.txtContactName = New System.Windows.Forms.TextBox()
+        Me.txtPostCode = New System.Windows.Forms.TextBox()
+        Me.txtAddress = New System.Windows.Forms.TextBox()
+        Me.txtName = New System.Windows.Forms.TextBox()
+        Me.txtAccountNum = New System.Windows.Forms.TextBox()
         Me.tabDefSett = New System.Windows.Forms.TabPage()
         Me.tabCreditControl = New System.Windows.Forms.TabPage()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.btnNext = New System.Windows.Forms.Button()
+        Me.btnPrevious = New System.Windows.Forms.Button()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnExitProgram = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TabControl1.SuspendLayout()
         Me.tabCustDet.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -71,6 +79,13 @@ Partial Class Form1
         'tabCustDet
         '
         Me.tabCustDet.BackColor = System.Drawing.SystemColors.Control
+        Me.tabCustDet.Controls.Add(Me.DataGridView1)
+        Me.tabCustDet.Controls.Add(Me.btnExitProgram)
+        Me.tabCustDet.Controls.Add(Me.btnDelete)
+        Me.tabCustDet.Controls.Add(Me.btnPrevious)
+        Me.tabCustDet.Controls.Add(Me.btnNext)
+        Me.tabCustDet.Controls.Add(Me.btnSave)
+        Me.tabCustDet.Controls.Add(Me.btnAdd)
         Me.tabCustDet.Controls.Add(Me.lblAccStatus)
         Me.tabCustDet.Controls.Add(Me.lbURL)
         Me.tabCustDet.Controls.Add(Me.lblEmail)
@@ -84,19 +99,19 @@ Partial Class Form1
         Me.tabCustDet.Controls.Add(Me.lblAddress)
         Me.tabCustDet.Controls.Add(Me.lblName)
         Me.tabCustDet.Controls.Add(Me.lblAccount)
-        Me.tabCustDet.Controls.Add(Me.TextBox13)
-        Me.tabCustDet.Controls.Add(Me.TextBox12)
-        Me.tabCustDet.Controls.Add(Me.TextBox11)
-        Me.tabCustDet.Controls.Add(Me.TextBox10)
-        Me.tabCustDet.Controls.Add(Me.TextBox9)
-        Me.tabCustDet.Controls.Add(Me.TextBox8)
-        Me.tabCustDet.Controls.Add(Me.TextBox7)
-        Me.tabCustDet.Controls.Add(Me.TextBox6)
-        Me.tabCustDet.Controls.Add(Me.TextBox5)
-        Me.tabCustDet.Controls.Add(Me.TextBox4)
-        Me.tabCustDet.Controls.Add(Me.TextBox3)
-        Me.tabCustDet.Controls.Add(Me.TextBox2)
-        Me.tabCustDet.Controls.Add(Me.TextBox1)
+        Me.tabCustDet.Controls.Add(Me.txtBalance)
+        Me.tabCustDet.Controls.Add(Me.txtAccStatus)
+        Me.tabCustDet.Controls.Add(Me.txtURL)
+        Me.tabCustDet.Controls.Add(Me.txtEmail)
+        Me.tabCustDet.Controls.Add(Me.txtFax)
+        Me.tabCustDet.Controls.Add(Me.txtTelephone)
+        Me.tabCustDet.Controls.Add(Me.txtMobile)
+        Me.tabCustDet.Controls.Add(Me.txtVATNum)
+        Me.tabCustDet.Controls.Add(Me.txtContactName)
+        Me.tabCustDet.Controls.Add(Me.txtPostCode)
+        Me.tabCustDet.Controls.Add(Me.txtAddress)
+        Me.tabCustDet.Controls.Add(Me.txtName)
+        Me.tabCustDet.Controls.Add(Me.txtAccountNum)
         Me.tabCustDet.ForeColor = System.Drawing.Color.CornflowerBlue
         Me.tabCustDet.Location = New System.Drawing.Point(4, 33)
         Me.tabCustDet.Name = "tabCustDet"
@@ -108,7 +123,7 @@ Partial Class Form1
         'lblAccStatus
         '
         Me.lblAccStatus.AutoSize = True
-        Me.lblAccStatus.Location = New System.Drawing.Point(618, 323)
+        Me.lblAccStatus.Location = New System.Drawing.Point(604, 320)
         Me.lblAccStatus.Name = "lblAccStatus"
         Me.lblAccStatus.Size = New System.Drawing.Size(103, 24)
         Me.lblAccStatus.TabIndex = 25
@@ -117,7 +132,7 @@ Partial Class Form1
         'lbURL
         '
         Me.lbURL.AutoSize = True
-        Me.lbURL.Location = New System.Drawing.Point(618, 268)
+        Me.lbURL.Location = New System.Drawing.Point(604, 265)
         Me.lbURL.Name = "lbURL"
         Me.lbURL.Size = New System.Drawing.Size(46, 24)
         Me.lbURL.TabIndex = 24
@@ -126,7 +141,7 @@ Partial Class Form1
         'lblEmail
         '
         Me.lblEmail.AutoSize = True
-        Me.lblEmail.Location = New System.Drawing.Point(618, 216)
+        Me.lblEmail.Location = New System.Drawing.Point(604, 213)
         Me.lblEmail.Name = "lblEmail"
         Me.lblEmail.Size = New System.Drawing.Size(57, 24)
         Me.lblEmail.TabIndex = 23
@@ -135,7 +150,7 @@ Partial Class Form1
         'lblFax
         '
         Me.lblFax.AutoSize = True
-        Me.lblFax.Location = New System.Drawing.Point(618, 165)
+        Me.lblFax.Location = New System.Drawing.Point(604, 162)
         Me.lblFax.Name = "lblFax"
         Me.lblFax.Size = New System.Drawing.Size(42, 24)
         Me.lblFax.TabIndex = 22
@@ -144,7 +159,7 @@ Partial Class Form1
         'lblTelephone
         '
         Me.lblTelephone.AutoSize = True
-        Me.lblTelephone.Location = New System.Drawing.Point(618, 117)
+        Me.lblTelephone.Location = New System.Drawing.Point(604, 114)
         Me.lblTelephone.Name = "lblTelephone"
         Me.lblTelephone.Size = New System.Drawing.Size(103, 24)
         Me.lblTelephone.TabIndex = 21
@@ -153,7 +168,7 @@ Partial Class Form1
         'lblMobile
         '
         Me.lblMobile.AutoSize = True
-        Me.lblMobile.Location = New System.Drawing.Point(618, 65)
+        Me.lblMobile.Location = New System.Drawing.Point(604, 62)
         Me.lblMobile.Name = "lblMobile"
         Me.lblMobile.Size = New System.Drawing.Size(67, 24)
         Me.lblMobile.TabIndex = 20
@@ -162,7 +177,7 @@ Partial Class Form1
         'lblBalance
         '
         Me.lblBalance.AutoSize = True
-        Me.lblBalance.Location = New System.Drawing.Point(36, 488)
+        Me.lblBalance.Location = New System.Drawing.Point(69, 485)
         Me.lblBalance.Name = "lblBalance"
         Me.lblBalance.Size = New System.Drawing.Size(78, 24)
         Me.lblBalance.TabIndex = 19
@@ -171,7 +186,7 @@ Partial Class Form1
         'lblVATNum
         '
         Me.lblVATNum.AutoSize = True
-        Me.lblVATNum.Location = New System.Drawing.Point(36, 436)
+        Me.lblVATNum.Location = New System.Drawing.Point(69, 433)
         Me.lblVATNum.Name = "lblVATNum"
         Me.lblVATNum.Size = New System.Drawing.Size(94, 24)
         Me.lblVATNum.TabIndex = 18
@@ -180,7 +195,7 @@ Partial Class Form1
         'lblContactName
         '
         Me.lblContactName.AutoSize = True
-        Me.lblContactName.Location = New System.Drawing.Point(36, 377)
+        Me.lblContactName.Location = New System.Drawing.Point(69, 374)
         Me.lblContactName.Name = "lblContactName"
         Me.lblContactName.Size = New System.Drawing.Size(129, 24)
         Me.lblContactName.TabIndex = 17
@@ -189,7 +204,7 @@ Partial Class Form1
         'lblPostCode
         '
         Me.lblPostCode.AutoSize = True
-        Me.lblPostCode.Location = New System.Drawing.Point(36, 325)
+        Me.lblPostCode.Location = New System.Drawing.Point(69, 322)
         Me.lblPostCode.Name = "lblPostCode"
         Me.lblPostCode.Size = New System.Drawing.Size(97, 24)
         Me.lblPostCode.TabIndex = 16
@@ -198,7 +213,7 @@ Partial Class Form1
         'lblAddress
         '
         Me.lblAddress.AutoSize = True
-        Me.lblAddress.Location = New System.Drawing.Point(36, 163)
+        Me.lblAddress.Location = New System.Drawing.Point(69, 160)
         Me.lblAddress.Name = "lblAddress"
         Me.lblAddress.Size = New System.Drawing.Size(80, 24)
         Me.lblAddress.TabIndex = 15
@@ -207,7 +222,7 @@ Partial Class Form1
         'lblName
         '
         Me.lblName.AutoSize = True
-        Me.lblName.Location = New System.Drawing.Point(36, 112)
+        Me.lblName.Location = New System.Drawing.Point(69, 109)
         Me.lblName.Name = "lblName"
         Me.lblName.Size = New System.Drawing.Size(61, 24)
         Me.lblName.TabIndex = 14
@@ -216,103 +231,103 @@ Partial Class Form1
         'lblAccount
         '
         Me.lblAccount.AutoSize = True
-        Me.lblAccount.Location = New System.Drawing.Point(36, 60)
+        Me.lblAccount.Location = New System.Drawing.Point(69, 57)
         Me.lblAccount.Name = "lblAccount"
         Me.lblAccount.Size = New System.Drawing.Size(41, 24)
         Me.lblAccount.TabIndex = 13
         Me.lblAccount.Text = "A/C"
         '
-        'TextBox13
+        'txtBalance
         '
-        Me.TextBox13.Location = New System.Drawing.Point(191, 485)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(255, 29)
-        Me.TextBox13.TabIndex = 12
+        Me.txtBalance.Location = New System.Drawing.Point(224, 482)
+        Me.txtBalance.Name = "txtBalance"
+        Me.txtBalance.Size = New System.Drawing.Size(255, 29)
+        Me.txtBalance.TabIndex = 12
         '
-        'TextBox12
+        'txtAccStatus
         '
-        Me.TextBox12.Location = New System.Drawing.Point(727, 325)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(254, 29)
-        Me.TextBox12.TabIndex = 11
+        Me.txtAccStatus.Location = New System.Drawing.Point(736, 324)
+        Me.txtAccStatus.Name = "txtAccStatus"
+        Me.txtAccStatus.Size = New System.Drawing.Size(254, 29)
+        Me.txtAccStatus.TabIndex = 11
         '
-        'TextBox11
+        'txtURL
         '
-        Me.TextBox11.Location = New System.Drawing.Point(727, 267)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(254, 29)
-        Me.TextBox11.TabIndex = 10
+        Me.txtURL.Location = New System.Drawing.Point(736, 266)
+        Me.txtURL.Name = "txtURL"
+        Me.txtURL.Size = New System.Drawing.Size(254, 29)
+        Me.txtURL.TabIndex = 10
         '
-        'TextBox10
+        'txtEmail
         '
-        Me.TextBox10.Location = New System.Drawing.Point(727, 212)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(254, 29)
-        Me.TextBox10.TabIndex = 9
+        Me.txtEmail.Location = New System.Drawing.Point(736, 211)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(254, 29)
+        Me.txtEmail.TabIndex = 9
         '
-        'TextBox9
+        'txtFax
         '
-        Me.TextBox9.Location = New System.Drawing.Point(727, 160)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(254, 29)
-        Me.TextBox9.TabIndex = 8
+        Me.txtFax.Location = New System.Drawing.Point(736, 159)
+        Me.txtFax.Name = "txtFax"
+        Me.txtFax.Size = New System.Drawing.Size(254, 29)
+        Me.txtFax.TabIndex = 8
         '
-        'TextBox8
+        'txtTelephone
         '
-        Me.TextBox8.Location = New System.Drawing.Point(727, 112)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(254, 29)
-        Me.TextBox8.TabIndex = 7
+        Me.txtTelephone.Location = New System.Drawing.Point(736, 111)
+        Me.txtTelephone.Name = "txtTelephone"
+        Me.txtTelephone.Size = New System.Drawing.Size(254, 29)
+        Me.txtTelephone.TabIndex = 7
         '
-        'TextBox7
+        'txtMobile
         '
-        Me.TextBox7.Location = New System.Drawing.Point(727, 60)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(254, 29)
-        Me.TextBox7.TabIndex = 6
+        Me.txtMobile.Location = New System.Drawing.Point(736, 59)
+        Me.txtMobile.Name = "txtMobile"
+        Me.txtMobile.Size = New System.Drawing.Size(254, 29)
+        Me.txtMobile.TabIndex = 6
         '
-        'TextBox6
+        'txtVATNum
         '
-        Me.TextBox6.Location = New System.Drawing.Point(192, 436)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(254, 29)
-        Me.TextBox6.TabIndex = 5
+        Me.txtVATNum.Location = New System.Drawing.Point(225, 433)
+        Me.txtVATNum.Name = "txtVATNum"
+        Me.txtVATNum.Size = New System.Drawing.Size(254, 29)
+        Me.txtVATNum.TabIndex = 5
         '
-        'TextBox5
+        'txtContactName
         '
-        Me.TextBox5.Location = New System.Drawing.Point(192, 374)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(254, 29)
-        Me.TextBox5.TabIndex = 4
+        Me.txtContactName.Location = New System.Drawing.Point(225, 371)
+        Me.txtContactName.Name = "txtContactName"
+        Me.txtContactName.Size = New System.Drawing.Size(254, 29)
+        Me.txtContactName.TabIndex = 4
         '
-        'TextBox4
+        'txtPostCode
         '
-        Me.TextBox4.Location = New System.Drawing.Point(192, 319)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(254, 29)
-        Me.TextBox4.TabIndex = 3
+        Me.txtPostCode.Location = New System.Drawing.Point(225, 316)
+        Me.txtPostCode.Name = "txtPostCode"
+        Me.txtPostCode.Size = New System.Drawing.Size(254, 29)
+        Me.txtPostCode.TabIndex = 3
         '
-        'TextBox3
+        'txtAddress
         '
-        Me.TextBox3.Location = New System.Drawing.Point(192, 163)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(254, 124)
-        Me.TextBox3.TabIndex = 2
+        Me.txtAddress.Location = New System.Drawing.Point(225, 160)
+        Me.txtAddress.Multiline = True
+        Me.txtAddress.Name = "txtAddress"
+        Me.txtAddress.Size = New System.Drawing.Size(254, 124)
+        Me.txtAddress.TabIndex = 2
         '
-        'TextBox2
+        'txtName
         '
-        Me.TextBox2.Location = New System.Drawing.Point(192, 112)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(254, 29)
-        Me.TextBox2.TabIndex = 1
+        Me.txtName.Location = New System.Drawing.Point(225, 109)
+        Me.txtName.Name = "txtName"
+        Me.txtName.Size = New System.Drawing.Size(254, 29)
+        Me.txtName.TabIndex = 1
         '
-        'TextBox1
+        'txtAccountNum
         '
-        Me.TextBox1.Location = New System.Drawing.Point(192, 60)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(254, 29)
-        Me.TextBox1.TabIndex = 0
+        Me.txtAccountNum.Location = New System.Drawing.Point(225, 57)
+        Me.txtAccountNum.Name = "txtAccountNum"
+        Me.txtAccountNum.Size = New System.Drawing.Size(254, 29)
+        Me.txtAccountNum.TabIndex = 0
         '
         'tabDefSett
         '
@@ -334,6 +349,68 @@ Partial Class Form1
         Me.tabCreditControl.TabIndex = 2
         Me.tabCreditControl.Text = "Credit Control"
         '
+        'btnAdd
+        '
+        Me.btnAdd.Location = New System.Drawing.Point(1105, 59)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(152, 29)
+        Me.btnAdd.TabIndex = 26
+        Me.btnAdd.Text = "Add"
+        Me.btnAdd.UseVisualStyleBackColor = True
+        '
+        'btnSave
+        '
+        Me.btnSave.Location = New System.Drawing.Point(1105, 111)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(152, 29)
+        Me.btnSave.TabIndex = 27
+        Me.btnSave.Text = "Save"
+        Me.btnSave.UseVisualStyleBackColor = True
+        '
+        'btnNext
+        '
+        Me.btnNext.Location = New System.Drawing.Point(1105, 162)
+        Me.btnNext.Name = "btnNext"
+        Me.btnNext.Size = New System.Drawing.Size(152, 29)
+        Me.btnNext.TabIndex = 28
+        Me.btnNext.Text = "Next"
+        Me.btnNext.UseVisualStyleBackColor = True
+        '
+        'btnPrevious
+        '
+        Me.btnPrevious.Location = New System.Drawing.Point(1105, 213)
+        Me.btnPrevious.Name = "btnPrevious"
+        Me.btnPrevious.Size = New System.Drawing.Size(152, 29)
+        Me.btnPrevious.TabIndex = 29
+        Me.btnPrevious.Text = "Previous"
+        Me.btnPrevious.UseVisualStyleBackColor = True
+        '
+        'btnDelete
+        '
+        Me.btnDelete.Location = New System.Drawing.Point(1105, 267)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(152, 29)
+        Me.btnDelete.TabIndex = 30
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = True
+        '
+        'btnExitProgram
+        '
+        Me.btnExitProgram.Location = New System.Drawing.Point(1105, 325)
+        Me.btnExitProgram.Name = "btnExitProgram"
+        Me.btnExitProgram.Size = New System.Drawing.Size(152, 29)
+        Me.btnExitProgram.TabIndex = 31
+        Me.btnExitProgram.Text = "Exit Program"
+        Me.btnExitProgram.UseVisualStyleBackColor = True
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(608, 395)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(649, 192)
+        Me.DataGridView1.TabIndex = 32
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -346,6 +423,7 @@ Partial Class Form1
         Me.TabControl1.ResumeLayout(False)
         Me.tabCustDet.ResumeLayout(False)
         Me.tabCustDet.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -354,19 +432,19 @@ Partial Class Form1
     Friend WithEvents tabCustDet As TabPage
     Friend WithEvents tabDefSett As TabPage
     Friend WithEvents tabCreditControl As TabPage
-    Friend WithEvents TextBox13 As TextBox
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtBalance As TextBox
+    Friend WithEvents txtAccStatus As TextBox
+    Friend WithEvents txtURL As TextBox
+    Friend WithEvents txtEmail As TextBox
+    Friend WithEvents txtFax As TextBox
+    Friend WithEvents txtTelephone As TextBox
+    Friend WithEvents txtMobile As TextBox
+    Friend WithEvents txtVATNum As TextBox
+    Friend WithEvents txtContactName As TextBox
+    Friend WithEvents txtPostCode As TextBox
+    Friend WithEvents txtAddress As TextBox
+    Friend WithEvents txtName As TextBox
+    Friend WithEvents txtAccountNum As TextBox
     Friend WithEvents lblAccStatus As Label
     Friend WithEvents lbURL As Label
     Friend WithEvents lblEmail As Label
@@ -380,4 +458,11 @@ Partial Class Form1
     Friend WithEvents lblAddress As Label
     Friend WithEvents lblName As Label
     Friend WithEvents lblAccount As Label
+    Friend WithEvents btnExitProgram As Button
+    Friend WithEvents btnDelete As Button
+    Friend WithEvents btnPrevious As Button
+    Friend WithEvents btnNext As Button
+    Friend WithEvents btnSave As Button
+    Friend WithEvents btnAdd As Button
+    Friend WithEvents DataGridView1 As DataGridView
 End Class
