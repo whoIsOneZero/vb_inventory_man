@@ -1,0 +1,12 @@
+C:\Users\whoisonezero\source\repos\vb_inventory_man\bin\Debug\vb_inventory_man.exe.config
+C:\Users\whoisonezero\source\repos\vb_inventory_man\bin\Debug\vb_inventory_man.exe
+C:\Users\whoisonezero\source\repos\vb_inventory_man\bin\Debug\vb_inventory_man.pdb
+C:\Users\whoisonezero\source\repos\vb_inventory_man\bin\Debug\vb_inventory_man.xml
+C:\Users\whoisonezero\source\repos\vb_inventory_man\obj\Debug\vb_inventory_man.vbproj.AssemblyReference.cache
+C:\Users\whoisonezero\source\repos\vb_inventory_man\obj\Debug\vb_inventory_man.Form1.resources
+C:\Users\whoisonezero\source\repos\vb_inventory_man\obj\Debug\vb_inventory_man.Resources.resources
+C:\Users\whoisonezero\source\repos\vb_inventory_man\obj\Debug\vb_inventory_man.vbproj.GenerateResource.cache
+C:\Users\whoisonezero\source\repos\vb_inventory_man\obj\Debug\vb_inventory_man.vbproj.CoreCompileInputs.cache
+C:\Users\whoisonezero\source\repos\vb_inventory_man\obj\Debug\vb_inventory_man.exe
+C:\Users\whoisonezero\source\repos\vb_inventory_man\obj\Debug\vb_inventory_man.xml
+C:\Users\whoisonezero\source\repos\vb_inventory_man\obj\Debug\vb_inventory_man.pdb
