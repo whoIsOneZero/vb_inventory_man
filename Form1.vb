@@ -5,6 +5,9 @@
         Else
             MessageBox.Show("Invalid Username or Password", "Error!",
                             MessageBoxButtons.OK, MessageBoxIcon.Question)
+            txtPassword.Clear()
+            txtUsername.Clear()
+            txtUsername.Focus()
         End If
     End Sub
 
@@ -18,6 +21,15 @@
                                                      MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
         If result = DialogResult.Yes Then
+            Application.Exit()
+        End If
+    End Sub
+
+    Private Sub btnExitProgram_Click(sender As Object, e As EventArgs) Handles btnExitProgram.Click
+        Dim result = MessageBox.Show("Are you sure you want to exit?", "Message",
+                                     MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+        If (result = DialogResult.Yes) Then
             Application.Exit()
         End If
     End Sub

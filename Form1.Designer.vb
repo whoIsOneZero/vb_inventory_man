@@ -25,6 +25,9 @@ Partial Class Form1
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tabCustDet = New System.Windows.Forms.TabPage()
         Me.grpboxAuthPage = New System.Windows.Forms.GroupBox()
+        Me.btnExit = New System.Windows.Forms.Button()
+        Me.btnReset = New System.Windows.Forms.Button()
+        Me.btnLogin = New System.Windows.Forms.Button()
         Me.lblPassword = New System.Windows.Forms.Label()
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.txtPassword = New System.Windows.Forms.TextBox()
@@ -65,9 +68,6 @@ Partial Class Form1
         Me.txtAccountNum = New System.Windows.Forms.TextBox()
         Me.tabDefSett = New System.Windows.Forms.TabPage()
         Me.tabCreditControl = New System.Windows.Forms.TabPage()
-        Me.btnLogin = New System.Windows.Forms.Button()
-        Me.btnReset = New System.Windows.Forms.Button()
-        Me.btnExit = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.tabCustDet.SuspendLayout()
         Me.grpboxAuthPage.SuspendLayout()
@@ -141,12 +141,45 @@ Partial Class Form1
         Me.grpboxAuthPage.Controls.Add(Me.txtPassword)
         Me.grpboxAuthPage.Controls.Add(Me.txtUsername)
         Me.grpboxAuthPage.Controls.Add(Me.Label1)
-        Me.grpboxAuthPage.Location = New System.Drawing.Point(3, 6)
+        Me.grpboxAuthPage.Location = New System.Drawing.Point(73, 546)
         Me.grpboxAuthPage.Name = "grpboxAuthPage"
         Me.grpboxAuthPage.Size = New System.Drawing.Size(1339, 619)
         Me.grpboxAuthPage.TabIndex = 33
         Me.grpboxAuthPage.TabStop = False
         Me.grpboxAuthPage.Text = "..."
+        '
+        'btnExit
+        '
+        Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExit.ForeColor = System.Drawing.Color.Black
+        Me.btnExit.Location = New System.Drawing.Point(725, 427)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(85, 39)
+        Me.btnExit.TabIndex = 8
+        Me.btnExit.Text = "Exit"
+        Me.btnExit.UseVisualStyleBackColor = True
+        '
+        'btnReset
+        '
+        Me.btnReset.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReset.ForeColor = System.Drawing.Color.Black
+        Me.btnReset.Location = New System.Drawing.Point(619, 427)
+        Me.btnReset.Name = "btnReset"
+        Me.btnReset.Size = New System.Drawing.Size(85, 39)
+        Me.btnReset.TabIndex = 6
+        Me.btnReset.Text = "Reset"
+        Me.btnReset.UseVisualStyleBackColor = True
+        '
+        'btnLogin
+        '
+        Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.ForeColor = System.Drawing.Color.Black
+        Me.btnLogin.Location = New System.Drawing.Point(518, 427)
+        Me.btnLogin.Name = "btnLogin"
+        Me.btnLogin.Size = New System.Drawing.Size(85, 37)
+        Me.btnLogin.TabIndex = 5
+        Me.btnLogin.Text = "Login"
+        Me.btnLogin.UseVisualStyleBackColor = True
         '
         'lblPassword
         '
@@ -205,6 +238,7 @@ Partial Class Form1
         '
         'btnExitProgram
         '
+        Me.btnExitProgram.ForeColor = System.Drawing.Color.Black
         Me.btnExitProgram.Location = New System.Drawing.Point(1105, 325)
         Me.btnExitProgram.Name = "btnExitProgram"
         Me.btnExitProgram.Size = New System.Drawing.Size(152, 29)
@@ -214,6 +248,7 @@ Partial Class Form1
         '
         'btnDelete
         '
+        Me.btnDelete.ForeColor = System.Drawing.Color.Black
         Me.btnDelete.Location = New System.Drawing.Point(1105, 267)
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(152, 29)
@@ -223,6 +258,7 @@ Partial Class Form1
         '
         'btnPrevious
         '
+        Me.btnPrevious.ForeColor = System.Drawing.Color.Black
         Me.btnPrevious.Location = New System.Drawing.Point(1105, 213)
         Me.btnPrevious.Name = "btnPrevious"
         Me.btnPrevious.Size = New System.Drawing.Size(152, 29)
@@ -232,6 +268,7 @@ Partial Class Form1
         '
         'btnNext
         '
+        Me.btnNext.ForeColor = System.Drawing.Color.Black
         Me.btnNext.Location = New System.Drawing.Point(1105, 162)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(152, 29)
@@ -241,6 +278,7 @@ Partial Class Form1
         '
         'btnSave
         '
+        Me.btnSave.ForeColor = System.Drawing.Color.Black
         Me.btnSave.Location = New System.Drawing.Point(1105, 111)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(152, 29)
@@ -250,6 +288,7 @@ Partial Class Form1
         '
         'btnAdd
         '
+        Me.btnAdd.ForeColor = System.Drawing.Color.Black
         Me.btnAdd.Location = New System.Drawing.Point(1105, 59)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(152, 29)
@@ -485,39 +524,6 @@ Partial Class Form1
         Me.tabCreditControl.Size = New System.Drawing.Size(1345, 621)
         Me.tabCreditControl.TabIndex = 2
         Me.tabCreditControl.Text = "Credit Control"
-        '
-        'btnLogin
-        '
-        Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.ForeColor = System.Drawing.Color.Black
-        Me.btnLogin.Location = New System.Drawing.Point(518, 427)
-        Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(85, 37)
-        Me.btnLogin.TabIndex = 5
-        Me.btnLogin.Text = "Login"
-        Me.btnLogin.UseVisualStyleBackColor = True
-        '
-        'btnReset
-        '
-        Me.btnReset.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReset.ForeColor = System.Drawing.Color.Black
-        Me.btnReset.Location = New System.Drawing.Point(619, 427)
-        Me.btnReset.Name = "btnReset"
-        Me.btnReset.Size = New System.Drawing.Size(85, 39)
-        Me.btnReset.TabIndex = 6
-        Me.btnReset.Text = "Reset"
-        Me.btnReset.UseVisualStyleBackColor = True
-        '
-        'btnExit
-        '
-        Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.ForeColor = System.Drawing.Color.Black
-        Me.btnExit.Location = New System.Drawing.Point(725, 427)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(85, 39)
-        Me.btnExit.TabIndex = 8
-        Me.btnExit.Text = "Exit"
-        Me.btnExit.UseVisualStyleBackColor = True
         '
         'Form1
         '
