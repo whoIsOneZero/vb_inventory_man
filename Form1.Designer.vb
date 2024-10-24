@@ -27,8 +27,8 @@ Partial Class Form1
         Me.grpboxAuthPage = New System.Windows.Forms.GroupBox()
         Me.lblPassword = New System.Windows.Forms.Label()
         Me.lblUsername = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.btnExitProgram = New System.Windows.Forms.Button()
@@ -138,8 +138,8 @@ Partial Class Form1
         Me.grpboxAuthPage.Controls.Add(Me.btnLogin)
         Me.grpboxAuthPage.Controls.Add(Me.lblPassword)
         Me.grpboxAuthPage.Controls.Add(Me.lblUsername)
-        Me.grpboxAuthPage.Controls.Add(Me.TextBox2)
-        Me.grpboxAuthPage.Controls.Add(Me.TextBox1)
+        Me.grpboxAuthPage.Controls.Add(Me.txtPassword)
+        Me.grpboxAuthPage.Controls.Add(Me.txtUsername)
         Me.grpboxAuthPage.Controls.Add(Me.Label1)
         Me.grpboxAuthPage.Location = New System.Drawing.Point(3, 6)
         Me.grpboxAuthPage.Name = "grpboxAuthPage"
@@ -168,19 +168,22 @@ Partial Class Form1
         Me.lblUsername.TabIndex = 3
         Me.lblUsername.Text = "Username"
         '
-        'TextBox2
+        'txtPassword
         '
-        Me.TextBox2.Location = New System.Drawing.Point(537, 343)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(289, 29)
-        Me.TextBox2.TabIndex = 2
+        Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassword.Location = New System.Drawing.Point(537, 343)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPassword.Size = New System.Drawing.Size(289, 26)
+        Me.txtPassword.TabIndex = 2
         '
-        'TextBox1
+        'txtUsername
         '
-        Me.TextBox1.Location = New System.Drawing.Point(537, 261)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(289, 29)
-        Me.TextBox1.TabIndex = 1
+        Me.txtUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUsername.Location = New System.Drawing.Point(537, 261)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(289, 26)
+        Me.txtUsername.TabIndex = 1
         '
         'Label1
         '
@@ -576,8 +579,8 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents lblPassword As Label
     Friend WithEvents lblUsername As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtPassword As TextBox
+    Friend WithEvents txtUsername As TextBox
     Friend WithEvents btnReset As Button
     Friend WithEvents btnLogin As Button
     Friend WithEvents btnExit As Button
